@@ -3,3 +3,34 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+short_link:
+    path: /short-link
+    controller: App\Controller\ShortLinkController::shortLink
+    methods: ["POST"]
+
+product_create:
+    path: /product-create
+    controller: App\Controller\ProductController::createProduct
+    methods: ["POST"]
+
+product_read_all:
+    path: /product-read-all
+    controller: App\Controller\ProductController::readAllProduct
+    methods: ["GET"]
+
+product_read_one:
+    path: /product-read-one/{id}
+    controller: App\Controller\ProductController::readOneProduct
+    methods: ["GET"]
+
+product_update:
+    path: /product-update/{id}
+    controller: App\Controller\ProductController::updateProduct
+    methods: ["PATCH"]
+
+product_delete:
+    path: /product-delete/{id}
+    controller: App\Controller\ProductController::deleteProduct
+    methods: ["DELETE"]
+
